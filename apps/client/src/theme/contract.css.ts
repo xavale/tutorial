@@ -5,6 +5,17 @@ export const vars = createThemeContract({
 		common: {
 			black: null,
 			white: null,
+			gray: {
+				1: null, // backgrounds
+				2: null, // interactive components
+				3: null, // borders and separators
+				4: null, // texts and icons
+			},
+		},
+		primary: {
+			main: null,
+			light: null,
+			dark: null,
 		},
 	},
 	typography: {
