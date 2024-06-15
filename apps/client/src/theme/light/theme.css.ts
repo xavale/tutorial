@@ -1,11 +1,22 @@
+import { vars } from '@/theme/contract.css';
 import { createTheme } from '@vanilla-extract/css';
-import { vars } from '@/theme/contract.css'
 
 export const themeClass = createTheme(vars, {
-  palette: {
+	palette: {
 		common: {
 			black: '#000',
-			white: 'fff',
+			white: '#FFF',
+			gray: {
+				1: '#F9F9F9',
+				2: '#E8E8E8',
+				3: '#CECECE',
+				4: '#8D8D8D',
+			},
+		},
+		primary: {
+			main: '#027864',
+			light: '#F2FBF9',
+			dark: '#16433C',
 		},
 	},
 	typography: {
@@ -14,9 +25,9 @@ export const themeClass = createTheme(vars, {
 			1: '12px',
 			2: '14px',
 			3: '16px',
-			4: '18px',
-			5: '20px',
-			6: '24px',
+			4: '20px',
+			5: '24px',
+			6: '28px',
 		},
 		letterSpacing: {
 			normal: 'normal',
@@ -24,9 +35,9 @@ export const themeClass = createTheme(vars, {
 			relaxed: '1px',
 		},
 		lineHeight: {
-			normal: '115%',
-			tight: '100%',
-			relaxed: '125%',
+			normal: '1.15',
+			tight: '1',
+			relaxed: '1.25',
 		},
 	},
 });

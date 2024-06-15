@@ -1,5 +1,5 @@
-import { globalStyle } from '@vanilla-extract/css';
 import { vars } from '@/theme/contract.css';
+import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle('*', {
 	margin: 0,
@@ -20,13 +20,28 @@ globalStyle('body, html', {
 	WebkitTextSizeAdjust: '100%',
 });
 
+globalStyle('body', {
+	background: vars.palette.common.gray[1],
+	minHeight: '100vh',
+});
+
 globalStyle('h1, h2, h3, h4, h5, h6, p', {
+	fontSize: 'inherit',
 	fontWeight: 'normal',
 	overflowWrap: 'break-word',
 });
 
+globalStyle('a', {
+	textDecoration: 'none',
+	userSelect: 'none',
+});
+
 globalStyle('button, input, select, textarea', {
+	appearance: 'none',
 	font: 'inherit',
+	touchAction: 'manipulation',
+	userSelect: 'none',
+	WebkitTapHighlightColor: 'transparent',
 });
 
 globalStyle('canvas, img, picture, svg, video', {
@@ -34,3 +49,6 @@ globalStyle('canvas, img, picture, svg, video', {
 	maxWidth: '100%',
 });
 
+globalStyle('button, fieldset, input', {
+	all: 'unset',
+});
